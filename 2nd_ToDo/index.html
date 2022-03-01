@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=600,user-scalable=no" />
+		<title>To Do List</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1 id="title">To Do List</h1>
+			<div id="textBox">
+				<form id="form">
+					<input
+						type="text"
+						id="ToDo"
+						placeholder="Write To Do List"
+						autocomplete="off"
+						maxlength="20"
+						required
+					/>
+				</form>
+				<button type="button" id="putBtn"><i class="far fa-plus-square"></i></button>
+			</div>
+			<input type="checkbox" name="checkList" id="checkAll" />
+			<label for="checkAll"><span>All</span></label>
+
+			<div id="to">
+				<!-- <h2 class="subtit">To Do</h2> -->
+				<ul id="list" class="list"></ul>
+			</div>
+
+			<div id="complete">
+				<!-- <h2 class="subtit">Done</h2> -->
+				<ul id="doneList" class="list"></ul>
+			</div>
+			<div class="removeWrap">
+				<button type="button" id="removeChecked" class="allBtn">Remove Checked</button>
+				<button type="button" id="removeAll" class="allBtn">Remove<br />All</button>
+			</div>
+
+			<div class="checkRemove">
+				<p>정말 모두 삭제 하시겠습니까?</p>
+				<div id="buttonWrap" class="buttonWrap">
+					<button type="button" class="checkBtn checkBtn1">Yes</button>
+					<button type="button" class="checkBtn checkBtn2">No</button>
+				</div>
+			</div>
+			<div class="dim"></div>
+		</div>
+		<script src="js/createTag.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/clickEvent.js"></script>
+	</body>
+</html>

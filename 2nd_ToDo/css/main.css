@@ -1,0 +1,345 @@
+@font-face {
+	font-family: "NotoSansKr";
+	src: url(../font/NotoSansKR-Regular.otf) format("truetype");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "NotoSansKr";
+	src: url(../font/RobotoMono-Regular.ttf) format("truetype");
+	font-weight: normal;
+	unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+}
+
+html,
+body {
+	height: 100%;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+	background-color: rgb(36, 36, 36);
+	font-family: "NotoSansKr";
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+
+button {
+	background: none;
+	border: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+#wrapper {
+	position: relative;
+	width: 540px;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+#title {
+	width: 540px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 30px;
+	font-family: "NotoSansKr";
+	margin: 20px 0;
+	color: #eee;
+}
+/* input list */
+#textBox {
+	position: relative;
+	width: 500px;
+	height: 50px;
+	margin-left: 35px;
+}
+.list {
+	width: 540px;
+	height: 100%;
+	margin-top: 20px;
+}
+#form {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 50px;
+	display: inline-block;
+}
+.list li {
+	position: relative;
+	width: 518px;
+	height: 50px !important;
+	line-height: 50px;
+	color: #eee;
+	text-align: left;
+	margin: 5px 20px;
+	cursor: pointer;
+	background-color: rgba(87, 87, 87, 0.363);
+}
+.list li div {
+	display: inline-block;
+}
+input[class="checkMark"] + label span {
+	position: absolute;
+	left: 0;
+}
+input[type="checkbox"] {
+	display: none;
+}
+.innerText {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 518px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 18px;
+	text-indent: 18px;
+	/* background-color: rgba(87, 87, 87, 0.363); */
+}
+
+.list li.on .innerText {
+	color: rgb(109, 109, 109);
+	text-decoration: line-through;
+	background-color: rgba(131, 91, 91, 0.5);
+}
+.list li.on .doneBox {
+	color: rgba(241, 171, 171, 0.5);
+}
+.innerText .editBox {
+	position: absolute;
+	width: 513px;
+	height: 48px;
+	outline: none !important;
+	border: none;
+	font-size: 18px;
+	text-indent: 10px;
+	top: 0px;
+	left: 0px;
+	z-index: 120;
+	background-color: rgb(114, 114, 114);
+	color: #eee;
+	z-index: 140;
+}
+.doneBox {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0px;
+	right: 45px;
+	font-size: 30px;
+	color: grey;
+	cursor: pointer;
+	z-index: 130;
+}
+.fa-trash-alt,
+.fa-edit,
+.fa-check {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.fa-check {
+	font-size: 25px;
+}
+#to {
+	position: relative;
+	width: 540px;
+	height: auto;
+	margin-top: 71px;
+	/* padding-bottom: 20px; */
+}
+#complete {
+	margin-top: 20px;
+	width: 540px;
+	height: auto;
+	padding-bottom: 50px;
+}
+.subtit {
+	margin: 0 auto;
+	width: 500px;
+	height: 50px;
+	color: #eee;
+	line-height: 45px;
+	font-size: 20px;
+	margin: 0 20px;
+	border-bottom: 2px dotted rgb(80, 80, 80);
+}
+.editBtn,
+.submit {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 0;
+	right: 91px;
+	font-size: 20px;
+	z-index: 145;
+	color: rgb(167, 167, 167);
+}
+.submit {
+	right: 50px;
+}
+.fa-thumbs-up {
+	color: rgb(224, 224, 224);
+}
+.cancle {
+	position: absolute;
+	top: 0;
+	right: 2px;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	color: rgb(168, 73, 73);
+	z-index: 145;
+}
+.removeWrap {
+	margin-left: 266px;
+	width: 308px;
+	padding-bottom: 50px;
+}
+
+.removeBtn {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 2px;
+	font-size: 25px;
+	color: rgb(168, 73, 73);
+	z-index: 130;
+}
+#ToDo {
+	width: 445px;
+	height: 50px;
+	padding: 0px 20px;
+	border: none;
+	outline: none;
+	font-family: "NotoSansKr";
+	font-size: 18px;
+	font-weight: 600;
+	background-color: rgb(226, 226, 226);
+	color: rgb(48, 48, 48);
+}
+
+#ToDo::placeholder {
+	font-size: 16px;
+	font-family: "NotoSansKr";
+}
+#putBtn {
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	padding: 0;
+}
+.fa-plus-square {
+	font-size: 34px;
+	color: rgb(63, 63, 63);
+}
+
+.allBtn {
+	width: 110px;
+	height: 70px;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: "NotoSansKr";
+	background-color: rgba(87, 87, 87, 0.363);
+	vertical-align: top;
+	display: inline-block;
+	color: rgb(182, 182, 182);
+	border-radius: 5px;
+	overflow: hidden;
+	transition: color 0.5s;
+	transition: all 0.5s;
+}
+#removeChecked {
+	margin-right: 16px;
+}
+input[type="checkbox"] + label span {
+	position: absolute;
+	top: 0px;
+	width: 518px;
+	height: 50px;
+	text-align: center;
+	padding: 0;
+	/* border: 1px solid rgb(112, 112, 112); */
+	z-index: 100;
+	cursor: pointer;
+}
+input[class="checkMark"]:checked + label span {
+	background-color: rgba(196, 141, 21, 0.233);
+}
+input[id="checkAll"] + label span {
+	width: 81px;
+	height: 30px;
+	font-family: "NotoSansKr";
+	line-height: 30px;
+	position: absolute;
+	padding: 0;
+	background-color: rgba(87, 87, 87, 0.363);
+	border-radius: 20px;
+	top: 129px;
+	z-index: 100;
+	left: 13px;
+	color: #eee;
+}
+input[id="checkAll"]:checked + label span {
+	background-color: rgba(196, 141, 21, 0.233);
+	border: none;
+}
+.allCheckBtn {
+	padding: 0;
+}
+
+.dim {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: none;
+	z-index: 110;
+}
+
+.checkRemove {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 186px;
+	background-color: rgba(95, 95, 95, 0.815);
+	transform: translate(-50%, -50%);
+	z-index: 150;
+	display: none;
+}
+.checkRemove > p {
+	font-family: "NotoSansKr";
+	line-height: 120px;
+	font-size: 18px;
+	color: rgb(205, 207, 209);
+}
+.buttonWrap {
+	position: absolute;
+	bottom: 35px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 237px;
+	height: 50px;
+	line-height: 30px;
+	display: none;
+}
+
+.checkBtn {
+	width: 76px;
+	height: 50px;
+	border-radius: 5px;
+	font-size: 18px;
+	font-family: "NotoSansKr";
+	background-color: rgb(65, 65, 65);
+	color: #eee;
+	margin: 0px 10px;
+	font-weight: 600;
+}
